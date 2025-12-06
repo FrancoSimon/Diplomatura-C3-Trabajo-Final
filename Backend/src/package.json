@@ -1,0 +1,31 @@
+{
+  "name": "trabajo-practico-final",
+  "version": "1.0.0",
+  "description": " DIPLOMATURA UNIVERSITARIA DESARROLLO WEB FULL STACK CON JAVASCRIPT ",
+  "homepage": "https://github.com/FrancoSimon/Diplomatura-C3-Trabajo-Final#readme",
+  "bugs": {
+    "url": "https://github.com/FrancoSimon/Diplomatura-C3-Trabajo-Final/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrancoSimon/Diplomatura-C3-Trabajo-Final.git"
+  },
+  "license": "ISC",
+  "author": "Franco Simon Olmedo",
+  "type": "module",
+  "main": "app.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node server.mjs",
+    "start": "node server.mjs"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.0.1",
+    "morgan": "^1.10.1"
+  }
+}
