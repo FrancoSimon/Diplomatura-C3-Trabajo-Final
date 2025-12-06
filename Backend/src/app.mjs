@@ -12,6 +12,7 @@ import { connectDB } from "./config/dbconfig.mjs";
 
 // Rutas centrales (las crearemos después)
 import indexRoutes from "./routes/indexRoutes.mjs";
+import { errorHandler } from "./middlewares/errorHandler.mjs";
 
 const app = express();
 
@@ -25,5 +26,8 @@ connectDB();
 
 // Rutas
 app.use("/api", indexRoutes);
+
+// Middleware global para manejar errores
+app.use(errorHandler);
 
 export default app;
