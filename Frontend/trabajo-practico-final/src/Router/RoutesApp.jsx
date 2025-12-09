@@ -6,6 +6,7 @@ import WeatherCard from "../components/WeatherCard.jsx";
 import SearchForm from "../components/SearchFrom.jsx";
 import ContactoForm from "../components/ContactoFrom.jsx";
 import Login from "../components/Login.jsx"
+import FiambalaInfo from "../components/FiambalaInfo.jsx";
 
 const RoutesApp = () => {
   return (
@@ -15,6 +16,7 @@ const RoutesApp = () => {
         element={
           <>
             <Header />
+            <FiambalaInfo />
             <DestinosTuristicos />
             <div
               id="clima"
@@ -28,6 +30,7 @@ const RoutesApp = () => {
         }
       />
 
+      <Route path="/Fiambalá" element={<FiambalaInfo />} />
       <Route path="/destinos" element={<DestinosTuristicos />} />
 
       <Route

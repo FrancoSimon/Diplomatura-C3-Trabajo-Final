@@ -139,7 +139,14 @@ const Navbar = () => {
                   Inicio
                 </NavLink>
               </li>
-
+              <li>
+                <NavLink
+                  to="/Fiambalá"
+                  className="sm:text-lg text-sm text-white hover:text-orange-400"
+                >
+                  Fiambalá
+                </NavLink>
+              </li>
               <li>
                 <NavLink
                   to="/destinos"
@@ -148,7 +155,6 @@ const Navbar = () => {
                   Destinos
                 </NavLink>
               </li>
-
               <li>
                 <NavLink
                   to="/clima"
@@ -157,7 +163,6 @@ const Navbar = () => {
                   Clima
                 </NavLink>
               </li>
-
               <li>
                 <NavLink
                   to="/contacto"
@@ -166,7 +171,6 @@ const Navbar = () => {
                   Contacto
                 </NavLink>
               </li>
-
               {/* FAVORITOS */}
               <li>
                 <button
