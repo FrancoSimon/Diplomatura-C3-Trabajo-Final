@@ -35,12 +35,4 @@ export const verificarToken = async (req, res, next) => {
   }
 };
 
-//por roles Middleware para validar ADMIN
-export const soloAdmin = (req, res, next) => {
-  if (req.usuario?.rol !== "admin") {
-    return res
-      .status(403)
-      .json({ error: "Acción permitida solo para administradores" });
-  }
-  next();
-};
+

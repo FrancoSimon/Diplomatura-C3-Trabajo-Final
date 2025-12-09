@@ -13,3 +13,5 @@ export const soloAdmin = (req, res, next) => {
   // Todo OK, continuar
   next();
 };
+
+

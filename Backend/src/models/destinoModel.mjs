@@ -17,7 +17,6 @@ const destinoSchema = new mongoose.Schema(
     hospedajes: [{ type: mongoose.Schema.Types.ObjectId, ref: "Hospedaje" }],
     gastronomia: [{ type: mongoose.Schema.Types.ObjectId, ref: "Gastronomia" }],
     excursiones: [{ type: mongoose.Schema.Types.ObjectId, ref: "Excursion" }],
-
     // ✔ Campos correctos de clasificación
     rating: { type: Number, default: 0 },
     ratingCount: { type: Number, default: 0 },

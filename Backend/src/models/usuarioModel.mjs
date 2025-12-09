@@ -10,6 +10,16 @@ const usuarioSchema = new mongoose.Schema(
     rol: { type: String, enum: ["admin", "turista"], default: "turista" },
     favoritos: [{ type: mongoose.Schema.Types.ObjectId, ref: "Destino" }],
     aventuras: [{ type: mongoose.Schema.Types.ObjectId, ref: "Aventura" }],
+    carrito: {
+      destinos: [{ type: mongoose.Schema.Types.ObjectId, ref: "Destino" }],
+      hospedajes: [{ type: mongoose.Schema.Types.ObjectId, ref: "Hospedaje" }],
+      gastronomia: [
+        { type: mongoose.Schema.Types.ObjectId, ref: "Gastronomia" },
+      ],
+      excursiones: [{ type: mongoose.Schema.Types.ObjectId, ref: "Excursion" }],
+      fechaViaje: { type: Date },
+      presupuesto: { type: Number, default: 0 },
+    },
   },
   { timestamps: true }
 );
