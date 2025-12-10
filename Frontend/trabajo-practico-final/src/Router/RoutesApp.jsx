@@ -21,10 +21,11 @@ const RoutesApp = () => {
             <div
               id="clima"
               className="flex flex-col items-center justify-center bg-gray-300 p-4"
-            >
+            > <div className="min-h-screen bg-white py-12 px-4 sm:px-6 lg:px-8 pt-24">
               <h1 className="text-3xl font-bold p-3">Pronóstico del tiempo</h1>
               <SearchForm />
               <WeatherCard />
+            </div>
             </div>
           </>
         }
