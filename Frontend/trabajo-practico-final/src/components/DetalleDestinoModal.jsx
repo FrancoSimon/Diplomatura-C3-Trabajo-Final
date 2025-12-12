@@ -169,12 +169,7 @@ const DetalleDestinoModal = ({
 
               <div className="space-y-3">
                 <button
-                  onClick={() => {
-                    onClose();
-                    if (onIniciarSesionClick) {
-                      onIniciarSesionClick();
-                    }
-                  }}
+                  onClick={onIniciarSesionClick} // Esta función ahora navegará a /Login
                   className="group bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/20 w-full max-w-xs flex items-center justify-center gap-3 mx-auto"
                 >
                   <i className="bi bi-box-arrow-in-right"></i>

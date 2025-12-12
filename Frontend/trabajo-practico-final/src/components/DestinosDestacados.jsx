@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom"; // AÑADE ESTE IMPORT
 import axios from "axios";
 import { toast } from "react-toastify";
-import { useWatchlist } from "../context/WatchlistContext"; // Asegúrate de que esta ruta sea correcta
+import { useWatchlist } from "../context/WatchlistContext";
 import DetalleDestinoModal from "./DetalleDestinoModal";
-import Login from "./Login"; // Asegúrate de importar el componente Login
 
 const DestinosDestacados = () => {
   const [turisticos, setTuristicos] = useState([]);
@@ -11,7 +11,7 @@ const DestinosDestacados = () => {
   const scrollContainerRef = useRef(null);
   const [modalInfoAbierto, setModalInfoAbierto] = useState(false);
   const [destinoSeleccionado, setDestinoSeleccionado] = useState(null);
-  const [showLogin, setShowLogin] = useState(false);
+  const navigate = useNavigate(); // INSTANCIA DE NAVEGACIÓN
 
   // Función para cargar destinos
   const cargarTresDestinos = async () => {
@@ -69,9 +69,10 @@ const DestinosDestacados = () => {
     setModalInfoAbierto(false);
   };
 
-  // Función para manejar el clic en "Iniciar Sesión"
+  // Función para manejar el clic en "Iniciar Sesión" - ACTUALIZADA
   const handleIniciarSesionClick = () => {
-    setShowLogin(true);
+    cerrarModalInfo(); // Cierra el modal primero
+    navigate("/Login"); // Navega a la ruta /Login
   };
 
   return (
@@ -154,7 +155,7 @@ const DestinosDestacados = () => {
                       </span>
                     </button>
                     <button
-                      onClick={() => abrirModalInfo(turistico)} // Cambiado de handleMasInformacion a abrirModalInfo
+                      onClick={() => abrirModalInfo(turistico)}
                       className="group bg-transparent p-2 sm:p-3 rounded-xl border border-white hover:bg-blue-600 hover:border-blue-600 transition-all duration-200 flex-1 flex items-center justify-center relative min-h-[44px]"
                     >
                       <i className="bi bi-info-circle text-white group-hover:text-blue-200 transition-colors text-sm sm:text-base"></i>
@@ -211,23 +212,13 @@ const DestinosDestacados = () => {
         </p>
       </div>
 
-      {/* Modal de información - FUERA del map */}
+      {/* Modal de información */}
       <DetalleDestinoModal
         isOpen={modalInfoAbierto}
         onClose={cerrarModalInfo}
         destino={destinoSeleccionado}
         onIniciarSesionClick={handleIniciarSesionClick}
       />
-
-      {/* Componente Login - FUERA del map */}
-      {showLogin && (
-        <Login
-          onClose={() => setShowLogin(false)}
-          onRegisterClick={() => {
-            // Aquí puedes manejar la navegación al registro
-          }}
-        />
-      )}
     </div>
   );
 };
