@@ -5,8 +5,9 @@ import DestinosTuristicos from "../components/DestinosTuristicos.jsx";
 import WeatherCard from "../components/WeatherCard.jsx";
 import SearchForm from "../components/SearchFrom.jsx";
 import ContactoForm from "../components/ContactoFrom.jsx";
-import Login from "../components/Login.jsx"
+import Login from "../components/Login.jsx";
 import FiambalaInfo from "../components/FiambalaInfo.jsx";
+import DestinosDestacados from "../components/DestinosDestacados.jsx";
 
 const RoutesApp = () => {
   return (
@@ -17,22 +18,22 @@ const RoutesApp = () => {
           <>
             <Header />
             <FiambalaInfo />
-            <DestinosTuristicos />
+            <DestinosDestacados />
+            {/*<DestinosTuristicos />*/}
             <div
               id="clima"
               className="flex flex-col items-center justify-center bg-gray-300 p-4"
-            > <div className="min-h-screen bg-white py-12 px-4 sm:px-6 lg:px-8 pt-24">
+            >
               <h1 className="text-3xl font-bold p-3">Pronóstico del tiempo</h1>
               <SearchForm />
               <WeatherCard />
-            </div>
             </div>
           </>
         }
       />
 
       <Route path="/Fiambalá" element={<FiambalaInfo />} />
-      <Route path="/destinos" element={<DestinosTuristicos />} />
+      <Route path="/destinosdestacados" element={<DestinosDestacados />} />
 
       <Route
         path="/clima"

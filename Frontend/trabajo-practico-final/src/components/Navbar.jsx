@@ -79,7 +79,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full bg-blue-900 z-50 transition-all duration-300">
+      <nav className="fixed top-0 left-0 w-full bg-black/80 z-50 transition-all duration-300">
         <div className="flex justify-between items-center sm:px-12 sm:py-6 px-4">
           {/* Logo y Clima */}
           <div className="flex items-center space-x-2">
@@ -149,7 +149,7 @@ const Navbar = () => {
               </li>
               <li>
                 <NavLink
-                  to="/destinos"
+                  to="/destinosdestacados"
                   className="sm:text-lg text-sm text-white hover:text-orange-400"
                 >
                   Destinos
