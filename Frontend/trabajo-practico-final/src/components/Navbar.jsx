@@ -238,7 +238,17 @@ const Navbar = () => {
 
             <li className="py-2 text-center">
               <Link
-                to="/destinos"
+                to="/Fiambalá"
+                onClick={() => setIsMenuOpen(false)}
+                className="text-white"
+              >
+                Fiambalá
+              </Link>
+            </li>
+
+            <li className="py-2 text-center">
+              <Link
+                to="/destinosdestacados"
                 onClick={() => setIsMenuOpen(false)}
                 className="text-white"
               >

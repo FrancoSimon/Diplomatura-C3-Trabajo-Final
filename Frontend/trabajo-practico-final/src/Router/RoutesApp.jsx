@@ -1,17 +1,18 @@
 import { Routes, Route } from "react-router-dom";
 
 import { Header } from "../components/Header.jsx";
-import DestinosTuristicos from "../components/DestinosTuristicos.jsx";
+import FiambalaInfo from "../components/FiambalaInfo.jsx";
+import DestinosDestacados from "../components/DestinosDestacados.jsx";
+import DestinosTrusticos from "../components/DestinosTuristicos.jsx";
 import WeatherCard from "../components/WeatherCard.jsx";
 import SearchForm from "../components/SearchFrom.jsx";
 import ContactoForm from "../components/ContactoFrom.jsx";
 import Login from "../components/Login.jsx";
-import FiambalaInfo from "../components/FiambalaInfo.jsx";
-import DestinosDestacados from "../components/DestinosDestacados.jsx";
 
 const RoutesApp = () => {
   return (
     <Routes>
+      {/* HOME / LANDING */}
       <Route
         path="/"
         element={
@@ -19,23 +20,38 @@ const RoutesApp = () => {
             <Header />
             <FiambalaInfo />
             <DestinosDestacados />
-            {/*<DestinosTuristicos />*/}
-            <div
+
+            <section
               id="clima"
               className="flex flex-col items-center justify-center bg-gray-300 p-4"
             >
               <h1 className="text-3xl font-bold p-3">Pronóstico del tiempo</h1>
               <SearchForm />
               <WeatherCard />
-            </div>
+            </section>
           </>
         }
       />
-
-      <Route path="/Fiambalá" element={<FiambalaInfo />} />
-      <Route path="/destinosdestacados" element={<DestinosDestacados />} />
-
+      {/* LOGIN */}
+      <Route path="/login" element={<Login />} />
+      {/* CONTACTO */}
+      <Route path="/contacto" element={<ContactoForm />} />
+      {/* DESTINOS DESTACADOS */}
       <Route
+        path="/destinosdestacados"
+        element={
+          <>
+            <DestinosDestacados />
+          </>
+        }
+      />
+      {/* Fiambala Info*/}
+      <Route path="/Fiambalá" element={<FiambalaInfo />} />
+       {/* Destino Turistico*/}
+
+      <Route path="/DestinosTuristicos" element={<DestinosTrusticos/>} />
+
+       <Route
         path="/clima"
         element={
           <div className="min-h-screen flex flex-col items-center justify-center bg-gray-300 p-4 pt-22">
@@ -46,9 +62,7 @@ const RoutesApp = () => {
         }
       />
 
-      <Route path="/contacto" element={<ContactoForm />} />
-      <Route path="/Login" element={<Login />} />
-
+      {/* FAVORITOS (protegida luego) */}
       <Route
         path="/favoritos"
         element={<h1 className="text-center p-10 text-3xl">Favoritos</h1>}

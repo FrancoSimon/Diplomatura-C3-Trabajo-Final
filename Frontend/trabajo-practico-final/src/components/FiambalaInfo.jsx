@@ -13,7 +13,7 @@ import {
 
 const FiambalaInfo = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-amber-400 to-orange-150 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-b from-amber-400 to-orange-150 py-12 px-4 sm:px-6 lg:px-8 pt-27">
       <div className="max-w-7xl mx-auto">
         {/* Header con título principal - Colores actualizados */}
         <div className="text-center mb-12">

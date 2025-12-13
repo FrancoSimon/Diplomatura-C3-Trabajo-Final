@@ -115,7 +115,7 @@ const DestinosDestacados = () => {
           className="flex overflow-x-auto scrollbar-hide py-4 px-2 snap-x snap-mandatory"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
-          <div className="flex gap-4 sm:gap-6">
+          <div className="flex gap-4 sm:gap-6 ">
             {Array.isArray(turisticos) && turisticos.length > 0 ? (
               turisticos.map((turistico) => (
                 <div
